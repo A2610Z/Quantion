@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quantion</title>
+
+    <!-- Icon -->
+    <link rel="icon" type="image/png" href="ICON/Quantion.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="CSS/style.css" />
+</head>
+
+<body>
+    <main class="counter" role="main">
+        <h1 class="counterTitle">Quantion</h1>
+
+        <div class="counterValueWrapper" aria-live="polite" aria-atomic="true">
+            <span class="counterValue">0</span>
+        </div>
+
+        <button class="counterResetButton" aria-label="Reset Counter" type="button">
+            <i class="fas fa-sync-alt counterResetButtonIcon" aria-hidden="true"></i>
+        </button>
+
+        <div class="counterButtons">
+            <button class="counterButton counterButtonDecrease" aria-label="Decrease Counter" type="button">
+                <i class="fas fa-minus counterIcon" aria-hidden="true"></i>
+            </button>
+            <button class="counterButton counterButtonIncrease" aria-label="Increase Counter" type="button">
+                <i class="fas fa-plus counterIcon" aria-hidden="true"></i>
+            </button>
+        </div>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="JS/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+/* ========== Reset & Base Styles ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+    background: linear-gradient(135deg, #818586, #2d3436);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* ========== Counter Container ========== */
+.counter {
+    background-color: #575a5b;
+    width: 500px;
+    height: 550px;
+    border-radius: 20px;
+    box-shadow: 0 20px 100px #050505;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Limit warning effect */
+.counter-limit {
+    background-color: #4e1f20;
+    animation: pulse 1s infinite alternate;
+    will-change: box-shadow;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px #ea0505;
+    }
+
+    100% {
+        box-shadow: 0 0 30px #ff0000;
+    }
+}
+
+/* ========== Typography ========== */
+.counterTitle {
+    margin-top: 50px;
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff;
+    opacity: 0.7;
+}
+
+.counterValue {
+    margin-top: 10px;
+    font-size: 200px;
+    font-weight: 800;
+    color: #fff;
+    text-shadow: 0 0 10px #ffffff;
+}
+
+/* ========== Button Reset ========== */
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+/* Reset Button Icon */
+.counterResetButtonIcon {
+    font-size: 35px;
+    color: #ffffff;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.counterResetButtonIcon:hover {
+    opacity: 1;
+}
+
+/* ========== Button Container ========== */
+.counterButtons {
+    width: 100%;
+    height: 120px;
+    margin-top: auto;
+    display: flex;
+    background: linear-gradient(to right, #575d5e, #2d3436);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/* Individual Buttons */
+.counterButton {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.counterIcon {
+    font-size: 50px;
+    color: #fff;
+    opacity: 0.7;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.counterButton:hover .counterIcon {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+/* Left & Right Button Borders */
+.counterButtonDecrease {
+    border-right: 2px solid #292f31;
+}
+
+.counterButtonIncrease {
+    border-left: 2px solid #292f31;
+}
+
+/* Hover Effects */
+.counterButtonDecrease:hover {
+    background-color: #ab1516;
+    border-bottom-left-radius: 20px;
+}
+
+.counterButtonIncrease:hover {
+    background-color: #126216;
+    border-bottom-right-radius: 20px;
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 600px) {
+    .counter {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+
+    .counterTitle {
+        margin-top: 40%;
+        font-size: 24px;
+    }
+
+    .counterValue {
+        font-size: 150px;
+    }
+
+    .counterResetButtonIcon {
+        font-size: 30px;
+    }
+
+    .counterIcon {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 400px) {
+    .counterValue {
+        font-size: 100px;
+    }
+}
